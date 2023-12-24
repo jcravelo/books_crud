@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
      * @return void
      */
     public function up()
@@ -15,7 +16,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements("id");
             $table->string("name");
-            $table->string("precio");
+            $table->integer("precio");
             $table->timestamps();
         });
     }
